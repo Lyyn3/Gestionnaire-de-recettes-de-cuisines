@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="home.css" />
+        <title>Cooking Mama Home</title>
+    </head>
+    <body>
+        <!-- Page principale  -->
+
+        <!-- Header avec le nom du site + connexion admin -->
+        <header>
+            <nav>
+                <ul class="nav-list">
+                    <li>
+                        <a class="style-lien-nav" href="home.html"
+                            >Cooking Mama</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="style-lien-nav"
+                            href="/admin/admin.html"
+                            target="_blank"
+                            ><i class="fa-solid fa-user"></i> Admin</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!-- Form avec une search bar pour l'user -->
+            <form id="search-bar">
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined"
+                        >search</span
+                    >
+                    <input
+                        id="site-search"
+                        class="search-input"
+                        placeholder="Salade melon jambon cru, Saumon teriyaki, Fondant au chocolat...
+                        "
+                    />
+                    <button>Rechercher</button>
+                </div>
+                <br />
+                <span id="msg-error-site-search" class="error-msg"></span>
+                <div>
+                    <ul class="recipe-list">
+                        <li id="enter">Entrées</li>
+                        <li id="dish">Plats</li>
+                        <li id="dessert">Desserts</li>
+                    </ul>
+                </div>
+            </form>
+            <br />
+
+            <!-- Partie ou est affichée la recette recherché par l'user -->
+            <div id="view-recipe-search-user">
+                <h1 id="title-recipe" class="title-recipe"></h1>
+                <p id="prep-time-recipe" class="prep-time-recipe"></p>
+                <p id="cook-time-recipe" class="cook-time-recipe"></p>
+                <p id="ingredients-recipe" class="ingredients-recipe"></p>
+                <img id="photo-recipe" />
+                <p id="steps-recipe" class="steps-recipe"></p>
+            </div>
+        </main>
+
+        <script src="home.js"></script>
+    </body>
+</html>

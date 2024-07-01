@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="admin.css" />
+        <title>Cooking Mama Admin</title>
+    </head>
+    <body>
+        <!-- Page admin  -->
+
+        <!-- Header avec le nom du site + connexion admin -->
+        <header>
+            <nav>
+                <ul class="nav-list">
+                    <li>
+                        <a
+                            class="style-lien-nav"
+                            href="/home/home.html"
+                            target="_blank"
+                            >Cooking Mama</a
+                        >
+                    </li>
+                    <li>
+                        <a class="style-lien-nav" href="/admin/admin.html"
+                            ><i class="fa-solid fa-user"></i> Admin</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Partie connexion pour les administrateurs -->
+        <main>
+            <div class="page-admin">
+                <div id="login-form-admin" class="login-form-admin">
+                    <h1>Connexion Administrateurs</h1>
+                    <form id="login-form">
+                        <div class="email">
+                            <label for="email">Adresse email :</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder=" mama@cook.com"
+                            />
+                        </div>
+                        <div class="password">
+                            <label for="password">Mot de passe :</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                autocomplete="on"
+                                placeholder=" Mot de passe"
+                            />
+                        </div>
+                        <button>Se connecter</button>
+                        <span id="msg-error" class="error-msg"></span>
+                    </form>
+                </div>
+
+                <!-- Connexion réussie pour l'admin choix entre ajouter ou visualiser des recettes-->
+                <div id="admin-options">
+                    <button id="button-add">Ajouter une recette</button>
+                    <button id="button-view">Visualiser des recettes</button>
+                </div>
+
+                <!-- Partie pour ajouter une recette  -->
+                <div id="add-recipe-by-admin">
+                    <h2>Ajouter une recette</h2>
+                    <form id="add-recipe">
+                        <div class="title">
+                            <label for="title">Titre de la recette :</label>
+                            <input type="text" id="title" name="title" />
+                        </div>
+                        <div class="ingredient">
+                            <label for="ingredients">Ingrédients :</label>
+                            <input
+                                type="text"
+                                id="ingredients"
+                                name="ingredients"
+                            />
+                        </div>
+
+                        <div class="steps-recipe">
+                            <label for="steps-recipe"
+                                >Étapes de préparation :</label
+                            >
+                            <textarea
+                                name="steps-recipe"
+                                id="steps-recipe"
+                                rows="5"
+                                cols="25"
+                            ></textarea>
+                        </div>
+                        <div class="preparation-time">
+                            <label for="preparation-time"
+                                >Temps de préparation:</label
+                            >
+                            <input
+                                type="text"
+                                id="preparation-time"
+                                name="preparation-time"
+                            />
+                        </div>
+                        <div class="cooking">
+                            <label for="cooking">Temps de cuisson :</label>
+                            <input type="text" id="cooking" name="cooking" />
+                        </div>
+                        <div class="photo">
+                            <label for="photo">Photo de la recette :</label>
+                            <input
+                                type="url"
+                                id="photo"
+                                placeholder="URL de la photo"
+                            />
+                        </div>
+                        <button>Ajouter la recette</button>
+                        <span id="msg-error-add-recipe"></span>
+                    </form>
+                </div>
+
+                <!-- Afficher la recette que l'admin à ajoué -->
+
+                <div id="view-recipe-add-by-admin"></div>
+
+                <!-- Visualiser les recettes (de base je voulais que les recettes viennet du localStorage pour pouvoir les supprimmer/modifier du localStorage mais je n'ai pas réussi à tout faire)-->
+                <div id="view-recipe-by-admin">
+                    <h2>Les recettes</h2>
+                    <div class="view-recipe-by-admin">
+                        <ul class="recipe-view">
+                            <li>
+                                <a
+                                    class="style-title"
+                                    href="/recipes/fondant_au_chocolat.html"
+                                    target="_blank"
+                                    >Fondant au chocolat</a
+                                >
+                            </li>
+                            <li>
+                                <img
+                                    class="image"
+                                    src="/img/fondant-choco.jpg"
+                                    alt="Fondant au chocolat"
+                                />
+                            </li>
+                            <li>Temps de préparation : 30min</li>
+                        </ul>
+                        <ul class="recipe-view">
+                            <li>
+                                <a
+                                    class="style-title"
+                                    href="/recipes/fraisier.html"
+                                    target="_blank"
+                                    >Fraisier</a
+                                >
+                            </li>
+                            <li>
+                                <img
+                                    class="image"
+                                    src="/img/fraisier.jpg"
+                                    alt="Fraisier"
+                                />
+                            </li>
+                            <li>Temps de préparation : 1h</li>
+                        </ul>
+                        <ul class="recipe-view">
+                            <li>
+                                <a
+                                    class="style-title"
+                                    href="/recipes/tarte_aux_pommes.html"
+                                    target="_blank"
+                                    >Tarte aux pommes</a
+                                >
+                            </li>
+                            <li>
+                                <img
+                                    class="image"
+                                    src="/img/tarte-aux-pommes.jpg"
+                                    alt="Tarte aux pommes"
+                                />
+                            </li>
+                            <li>Temps de préparation : 45min</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="admin.js"></script>
+    </body>
+</html>

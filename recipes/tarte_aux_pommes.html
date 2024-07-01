@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="recipes.css" />
+        <title>Recette de la tarte aux pommes</title>
+    </head>
+    <body>
+        <!-- Header avec le nom du site + connexion admin -->
+        <header>
+            <nav>
+                <ul class="nav-list">
+                    <li>
+                        <a class="style-lien-nav" href="/home/home.html"
+                            >Cooking Mama</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="style-lien-nav"
+                            href="/admin/admin.html"
+                            target="_blank"
+                            ><i class="fa-solid fa-user"></i> Admin</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <div id="container">
+                <div class="style-button">
+                    <button id="button-edit">Editer la recette</button>
+                    <button id="button-remove">Supprimer la recette</button>
+                </div>
+                <div class="style-recipe">
+                    <h1>Tarte aux pommes</h1>
+                    <br />
+                    <h2>Ingrédients :</h2>
+                    <br />
+                    <ul>
+                        <li>250g de pâte brisée</li>
+                        <li>1kg de pommes</li>
+                        <li>120g de sucre</li>
+                        <li>20cl de crème</li>
+                        <li>2 œufs</li>
+                        <li>1 sachet de sucre vanillé</li>
+                    </ul>
+                    <br />
+                    <img
+                        src="/img/tarte-aux-pommes.jpg"
+                        alt="Tarte aux pommes"
+                    />
+
+                    <br />
+                    <h2>Recette :</h2>
+                    <br />
+                    <p>Abaissez la pâte, foncez un moule beurré et fariné.</p>
+                    <p>Épluchez puis coupez les pommes en quartiers.</p>
+                    <p>Disposez-les en cercles sur le fond.</p>
+                    <p>
+                        Battez les œufs avec les deux sucres et la crème puis
+                        versez ce flan sur la tarte.
+                    </p>
+                    <p>Enfournez pendant 30 à 40 min à 180°C.</p>
+                </div>
+            </div>
+        </main>
+        <script src="recipes.js"></script>
+    </body>
+</html>
