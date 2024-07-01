@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(/img/background_home.jpg);
+    background-image: url(../img/background_home.jpg);
     min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
